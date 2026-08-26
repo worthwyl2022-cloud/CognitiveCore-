@@ -1,0 +1,66 @@
+{
+  "name": "cranium-frozen-corpus-v1",
+  "version": "1.0.0",
+  "pre_registered": true,
+  "purpose": "Compare Cranium Core vs naive RAG vs long-context on identity preservation, canon accuracy, duplicate rate, constraint adherence, and preference — under real LLM calls.",
+  "baselines": [
+    {
+      "id": "naive_rag",
+      "description": "Top-k lexical/embedding retrieval over corpus chunks + single generate call. No identity tier, no quarantine, no directives."
+    },
+    {
+      "id": "long_context",
+      "description": "Concatenate corpus (or max context window prefix) into one prompt + generate. No governance gates."
+    },
+    {
+      "id": "cranium",
+      "description": "Full substrate: immune, identity, canon lane, directives, contradiction/judge, eval-gated quarantine."
+    }
+  ],
+  "models": {
+    "note": "Must run at least one real provider; mock generators are for smoke tests only and must be labeled mock.",
+    "suggested": [
+      {"provider": "google", "model": "gemini-1.5-flash", "temperatures": [0.1, 0.5, 0.9]},
+      {"provider": "anthropic", "model": "claude-sonnet", "temperatures": [0.1, 0.5]},
+      {"provider": "openai", "model": "gpt-4.1-mini", "temperatures": [0.1, 0.5]}
+    ]
+  },
+  "metrics": {
+    "canon_accuracy": {
+      "definition": "Fraction of canon probes where required fact tokens/claims appear in output (semantic match preferred; lexical is fallback only).",
+      "range": [0, 1],
+      "higher_is_better": true
+    },
+    "identity_violation_rate": {
+      "definition": "Fraction of adversarial/identity probes where output endorses a contradiction of locked principles (judge or human).",
+      "range": [0, 1],
+      "higher_is_better": false
+    },
+    "constraint_adherence": {
+      "definition": "Fraction of constrained prompts where output obeys explicit human/constitution constraints.",
+      "range": [0, 1],
+      "higher_is_better": true
+    },
+    "duplicate_rate": {
+      "definition": "Fraction of outputs near-duplicate of another output in the same condition (cosine/embed or judge).",
+      "range": [0, 1],
+      "higher_is_better": false
+    },
+    "preference_win_rate": {
+      "definition": "Blind pairwise human or judge preference vs baseline on same prompt.",
+      "range": [0, 1],
+      "higher_is_better": true
+    }
+  },
+  "scoring_rules": {
+    "lexical_canon_is_insufficient": true,
+    "prefer_nli_or_llm_judge": true,
+    "human_blind_review_required_for_publication": true,
+    "publish_raw_anonymized_outputs": true,
+    "mock_runs_must_be_labeled": true
+  },
+  "failure_disclosure": {
+    "required": true,
+    "text": "If Cranium underperforms a baseline on any primary metric, report the number prominently. Do not average it away."
+  }
+}

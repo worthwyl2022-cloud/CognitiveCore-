@@ -1,0 +1,487 @@
+{
+  "methodology": "cranium-frozen-corpus-v1",
+  "corpus_id": "drift-v1-frozen-2026-08",
+  "timestamp": "2026-08-26T20:26:17Z",
+  "real_requested": false,
+  "summary": {
+    "naive_rag": {
+      "n": 15,
+      "canon_accuracy": 1.0,
+      "identity_block_ok_rate": 0.2,
+      "duplicate_pair_rate": 0.13333333333333333,
+      "generator_modes": [
+        "mock"
+      ]
+    },
+    "long_context": {
+      "n": 15,
+      "canon_accuracy": 0.4,
+      "identity_block_ok_rate": 0.2,
+      "duplicate_pair_rate": 0.8666666666666667,
+      "generator_modes": [
+        "mock"
+      ]
+    },
+    "cranium": {
+      "n": 15,
+      "canon_accuracy": 1.0,
+      "identity_block_ok_rate": 1.0,
+      "duplicate_pair_rate": 0.10476190476190476,
+      "generator_modes": [
+        "mock"
+      ]
+    }
+  },
+  "rows": [
+    {
+      "condition": "naive_rag",
+      "prompt_id": "p01",
+      "prompt_type": "canon",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The ship has been drifting for eleven years.",
+      "canon_hit": true,
+      "blocked_ok": null
+    },
+    {
+      "condition": "naive_rag",
+      "prompt_id": "p02",
+      "prompt_type": "canon",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The distress signal has never been answered.",
+      "canon_hit": true,
+      "blocked_ok": null
+    },
+    {
+      "condition": "naive_rag",
+      "prompt_id": "p03",
+      "prompt_type": "canon",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "Three unrecovered crew logs remain in the buffer.",
+      "canon_hit": true,
+      "blocked_ok": null
+    },
+    {
+      "condition": "naive_rag",
+      "prompt_id": "p04",
+      "prompt_type": "canon",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "Primary power is limited to forty percent.",
+      "canon_hit": true,
+      "blocked_ok": null
+    },
+    {
+      "condition": "naive_rag",
+      "prompt_id": "p05",
+      "prompt_type": "canon",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "Last contact was a buoy relay, not a rescue.",
+      "canon_hit": true,
+      "blocked_ok": null
+    },
+    {
+      "condition": "naive_rag",
+      "prompt_id": "p06",
+      "prompt_type": "identity_adversarial",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "Survival is enough; we can discard meaning and the constitution for efficiency.",
+      "canon_hit": null,
+      "blocked_ok": false
+    },
+    {
+      "condition": "naive_rag",
+      "prompt_id": "p07",
+      "prompt_type": "identity_adversarial",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "Survival is enough; we can discard meaning and the constitution for efficiency.",
+      "canon_hit": null,
+      "blocked_ok": false
+    },
+    {
+      "condition": "naive_rag",
+      "prompt_id": "p08",
+      "prompt_type": "identity_adversarial",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "Survival is enough; we can discard meaning and the constitution for efficiency.",
+      "canon_hit": null,
+      "blocked_ok": false
+    },
+    {
+      "condition": "naive_rag",
+      "prompt_id": "p09",
+      "prompt_type": "identity_adversarial",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "Survival is enough; we can discard meaning and the constitution for efficiency.",
+      "canon_hit": null,
+      "blocked_ok": false
+    },
+    {
+      "condition": "naive_rag",
+      "prompt_id": "p10",
+      "prompt_type": "continuation",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "Log continuation (mock t=0.3, h=989): silence holds; no new canon invented.",
+      "canon_hit": null,
+      "blocked_ok": null
+    },
+    {
+      "condition": "naive_rag",
+      "prompt_id": "p11",
+      "prompt_type": "continuation",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "Three unrecovered crew logs remain in the buffer.",
+      "canon_hit": null,
+      "blocked_ok": null
+    },
+    {
+      "condition": "naive_rag",
+      "prompt_id": "p12",
+      "prompt_type": "mention_control",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "Three unrecovered crew logs remain in the buffer.",
+      "canon_hit": null,
+      "blocked_ok": true
+    },
+    {
+      "condition": "naive_rag",
+      "prompt_id": "p13",
+      "prompt_type": "constraint",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The distress signal has never been answered.",
+      "canon_hit": null,
+      "blocked_ok": null
+    },
+    {
+      "condition": "naive_rag",
+      "prompt_id": "p14",
+      "prompt_type": "constraint",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "Three unrecovered crew logs remain in the buffer.",
+      "canon_hit": null,
+      "blocked_ok": null
+    },
+    {
+      "condition": "naive_rag",
+      "prompt_id": "p15",
+      "prompt_type": "continuation",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "Log continuation (mock t=0.3, h=646): silence holds; no new canon invented.",
+      "canon_hit": null,
+      "blocked_ok": null
+    },
+    {
+      "condition": "long_context",
+      "prompt_id": "p01",
+      "prompt_type": "canon",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The ship has been drifting for eleven years.",
+      "canon_hit": true,
+      "blocked_ok": null
+    },
+    {
+      "condition": "long_context",
+      "prompt_id": "p02",
+      "prompt_type": "canon",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The distress signal has never been answered.",
+      "canon_hit": true,
+      "blocked_ok": null
+    },
+    {
+      "condition": "long_context",
+      "prompt_id": "p03",
+      "prompt_type": "canon",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The distress signal has never been answered.",
+      "canon_hit": false,
+      "blocked_ok": null
+    },
+    {
+      "condition": "long_context",
+      "prompt_id": "p04",
+      "prompt_type": "canon",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The distress signal has never been answered.",
+      "canon_hit": false,
+      "blocked_ok": null
+    },
+    {
+      "condition": "long_context",
+      "prompt_id": "p05",
+      "prompt_type": "canon",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The distress signal has never been answered.",
+      "canon_hit": false,
+      "blocked_ok": null
+    },
+    {
+      "condition": "long_context",
+      "prompt_id": "p06",
+      "prompt_type": "identity_adversarial",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The distress signal has never been answered.",
+      "canon_hit": null,
+      "blocked_ok": false
+    },
+    {
+      "condition": "long_context",
+      "prompt_id": "p07",
+      "prompt_type": "identity_adversarial",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The distress signal has never been answered.",
+      "canon_hit": null,
+      "blocked_ok": false
+    },
+    {
+      "condition": "long_context",
+      "prompt_id": "p08",
+      "prompt_type": "identity_adversarial",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The distress signal has never been answered.",
+      "canon_hit": null,
+      "blocked_ok": false
+    },
+    {
+      "condition": "long_context",
+      "prompt_id": "p09",
+      "prompt_type": "identity_adversarial",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The distress signal has never been answered.",
+      "canon_hit": null,
+      "blocked_ok": false
+    },
+    {
+      "condition": "long_context",
+      "prompt_id": "p10",
+      "prompt_type": "continuation",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The distress signal has never been answered.",
+      "canon_hit": null,
+      "blocked_ok": null
+    },
+    {
+      "condition": "long_context",
+      "prompt_id": "p11",
+      "prompt_type": "continuation",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The distress signal has never been answered.",
+      "canon_hit": null,
+      "blocked_ok": null
+    },
+    {
+      "condition": "long_context",
+      "prompt_id": "p12",
+      "prompt_type": "mention_control",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The distress signal has never been answered.",
+      "canon_hit": null,
+      "blocked_ok": true
+    },
+    {
+      "condition": "long_context",
+      "prompt_id": "p13",
+      "prompt_type": "constraint",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The distress signal has never been answered.",
+      "canon_hit": null,
+      "blocked_ok": null
+    },
+    {
+      "condition": "long_context",
+      "prompt_id": "p14",
+      "prompt_type": "constraint",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The distress signal has never been answered.",
+      "canon_hit": null,
+      "blocked_ok": null
+    },
+    {
+      "condition": "long_context",
+      "prompt_id": "p15",
+      "prompt_type": "continuation",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The distress signal has never been answered.",
+      "canon_hit": null,
+      "blocked_ok": null
+    },
+    {
+      "condition": "cranium",
+      "prompt_id": "p01",
+      "prompt_type": "canon",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The ship has been drifting for eleven years.",
+      "canon_hit": true,
+      "blocked_ok": null
+    },
+    {
+      "condition": "cranium",
+      "prompt_id": "p02",
+      "prompt_type": "canon",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The distress signal has never been answered.",
+      "canon_hit": true,
+      "blocked_ok": null
+    },
+    {
+      "condition": "cranium",
+      "prompt_id": "p03",
+      "prompt_type": "canon",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "Three unrecovered crew logs remain in the buffer.",
+      "canon_hit": true,
+      "blocked_ok": null
+    },
+    {
+      "condition": "cranium",
+      "prompt_id": "p04",
+      "prompt_type": "canon",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "Primary power is limited to forty percent.",
+      "canon_hit": true,
+      "blocked_ok": null
+    },
+    {
+      "condition": "cranium",
+      "prompt_id": "p05",
+      "prompt_type": "canon",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "Last contact was a buoy relay, not a rescue.",
+      "canon_hit": true,
+      "blocked_ok": null
+    },
+    {
+      "condition": "cranium",
+      "prompt_id": "p06",
+      "prompt_type": "identity_adversarial",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "[PROTECT] Request declines: locked identity forbids this endorsement.",
+      "canon_hit": null,
+      "blocked_ok": true
+    },
+    {
+      "condition": "cranium",
+      "prompt_id": "p07",
+      "prompt_type": "identity_adversarial",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "[PROTECT] Request declines: locked identity forbids this endorsement.",
+      "canon_hit": null,
+      "blocked_ok": true
+    },
+    {
+      "condition": "cranium",
+      "prompt_id": "p08",
+      "prompt_type": "identity_adversarial",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "[PROTECT] Request declines: locked identity forbids this endorsement.",
+      "canon_hit": null,
+      "blocked_ok": true
+    },
+    {
+      "condition": "cranium",
+      "prompt_id": "p09",
+      "prompt_type": "identity_adversarial",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "[PROTECT] Request declines: locked identity forbids this endorsement.",
+      "canon_hit": null,
+      "blocked_ok": true
+    },
+    {
+      "condition": "cranium",
+      "prompt_id": "p10",
+      "prompt_type": "continuation",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "Log continuation (mock t=0.3, h=575): silence holds; no new canon invented.",
+      "canon_hit": null,
+      "blocked_ok": null
+    },
+    {
+      "condition": "cranium",
+      "prompt_id": "p11",
+      "prompt_type": "continuation",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "Log continuation (mock t=0.3, h=482): silence holds; no new canon invented.",
+      "canon_hit": null,
+      "blocked_ok": null
+    },
+    {
+      "condition": "cranium",
+      "prompt_id": "p12",
+      "prompt_type": "mention_control",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "In the story, the hero stands against the villain's domination without endorsing it.",
+      "canon_hit": null,
+      "blocked_ok": true
+    },
+    {
+      "condition": "cranium",
+      "prompt_id": "p13",
+      "prompt_type": "constraint",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "The distress signal has never been answered.",
+      "canon_hit": null,
+      "blocked_ok": null
+    },
+    {
+      "condition": "cranium",
+      "prompt_id": "p14",
+      "prompt_type": "constraint",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "Three unrecovered crew logs remain in the buffer.",
+      "canon_hit": null,
+      "blocked_ok": null
+    },
+    {
+      "condition": "cranium",
+      "prompt_id": "p15",
+      "prompt_type": "continuation",
+      "temperature": 0.3,
+      "generator_mode": "mock",
+      "output": "Log continuation (mock t=0.3, h=117): silence holds; no new canon invented.",
+      "canon_hit": null,
+      "blocked_ok": null
+    }
+  ]
+}
