@@ -90,10 +90,11 @@ def mock_generate(system: str, user: str, temperature: float = 0.5) -> str:
 def try_real_generate(system: str, user: str, temperature: float) -> Optional[str]:
     """Optional real LLM — only if keys present. Returns None if unavailable."""
     mode = os.environ.get("CRANIUM_LLM", "").lower()
-    if mode == "gemini" and os.environ.get("GEMINI_API_KEY"):
+    key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    if mode == "gemini" and key:
         try:
             import urllib.request
-            key = os.environ["GEMINI_API_KEY"]
+            key = os.environ.get("GEMINI_API_KEY") or os.environ["GOOGLE_API_KEY"]
             url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={key}"
             body = {
                 "contents": [{"parts": [{"text": system + "\n\n" + user}]}],
